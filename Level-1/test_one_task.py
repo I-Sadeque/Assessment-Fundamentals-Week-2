@@ -1,9 +1,9 @@
+from datetime import date, datetime
+from dateutil.relativedelta import relativedelta
+import pytest
+from task_one import Trainee, Assessment
 # pylint: skip-file
 
-from task_one import Trainee, Assessment
-import pytest
-from dateutil.relativedelta import relativedelta
-from datetime import date, datetime
 
 def test_trainee():
     years_ago = date.today() - relativedelta(years=20)
