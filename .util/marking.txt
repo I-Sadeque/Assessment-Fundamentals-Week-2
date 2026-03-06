@@ -1,10 +1,13 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0
 rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamentals-Week-2
-collected 16 items / 1 error
+collected 24 items
 
-!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 0.13s ===============================
+Level-1/test_one_task.py .........                                       [ 37%]
+Level-2/test_two_task.py .......                                         [ 66%]
+Level-3/test_three_task.py ........                                      [100%]
+
+============================== 24 passed in 0.03s ==============================
 ************* Module task_one
 Level-1/task_one.py:17:0: C0301: Line too long (133/100) (line-too-long)
 Level-1/task_one.py:1:0: C0114: Missing module docstring (missing-module-docstring)
@@ -28,17 +31,26 @@ Level-2/task_two.py:69:0: R0903: Too few public methods (1/2) (too-few-public-me
 Level-2/task_two.py:85:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
 Level-2/task_two.py:82:0: R0903: Too few public methods (1/2) (too-few-public-methods)
 ************* Module task_three
+Level-3/task_three.py:18:0: C0301: Line too long (133/100) (line-too-long)
+Level-3/task_three.py:69:0: C0325: Unnecessary parens after 'return' keyword (superfluous-parens)
+Level-3/task_three.py:97:0: C0325: Unnecessary parens after 'return' keyword (superfluous-parens)
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
-Level-3/task_three.py:17:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-3/task_three.py:25:0: C0115: Missing class docstring (missing-class-docstring)
-Level-3/task_three.py:27:23: W0621: Redefining name 'questions' from outer scope (line 41) (redefined-outer-name)
-Level-3/task_three.py:27:51: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-3/task_three.py:25:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-3/task_three.py:33:0: C0115: Missing class docstring (missing-class-docstring)
-Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (line 48) (redefined-outer-name)
-Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-3/task_three.py:23:11: C0121: Comparison 'isinstance(assessment, Assessment) == False' should be 'isinstance(assessment, Assessment) is False' if checking for the singleton value False, or 'not isinstance(assessment, Assessment)' if testing for falsiness (singleton-comparison)
+Level-3/task_three.py:34:37: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-3/task_three.py:46:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-3/task_three.py:43:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-3/task_three.py:61:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
+Level-3/task_three.py:58:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-3/task_three.py:75:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
+Level-3/task_three.py:72:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-3/task_three.py:89:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
+Level-3/task_three.py:86:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-3/task_three.py:100:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-3/task_three.py:113:23: W0621: Redefining name 'questions' from outer scope (line 157) (redefined-outer-name)
+Level-3/task_three.py:113:51: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-3/task_three.py:110:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-3/task_three.py:123:23: W0621: Redefining name 'quiz' from outer scope (line 164) (redefined-outer-name)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.52/10 (previous run: 7.52/10, +0.00)
+Your code has been rated at 8.02/10 (previous run: 8.02/10, +0.00)
 
