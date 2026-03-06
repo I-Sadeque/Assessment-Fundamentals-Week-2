@@ -40,6 +40,8 @@ class Trainee:
 
 
 class Assessment:
+    """Created the structure for all assessments"""
+
     def __init__(self, name: str, type: str, score: int):
         self.name = name
         self.type = type
@@ -52,32 +54,41 @@ class Assessment:
 
 
 class MultipleChoiceAssessment(Assessment):
+    """Creates Variant for only Multi choice"""
+
     def __init__(self, name, score):
         self.name = name
         self.score = score
         self.type = 'multiple-choice'
 
     def calculate_score(self) -> float:
+        """calculates the specific Bias score"""
         return (self.score * 0.7)
 
 
 class TechnicalAssessment(Assessment):
+    """Creates Variant for only Technical"""
+
     def __init__(self, name, score):
         self.name = name
         self.score = score
         self.type = 'technical'
 
     def calculate_score(self) -> float:
+        """calculates the specific Bias score"""
         return self.score
 
 
 class PresentationAssessment(Assessment):
+    """Creates Variant for only presentation"""
+
     def __init__(self, name, score):
         self.name = name
         self.score = score
         self.type = 'presentation'
 
     def calculate_score(self) -> float:
+        """calculates the specific Bias score"""
         return (self.score * 0.6)
 
 
