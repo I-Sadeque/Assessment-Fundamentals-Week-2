@@ -1,8 +1,11 @@
+from datetime import date
+
 
 class Trainee:
     """Structure for the main class for trainee"""
 
     def __init__(self, name: str, email: str, dob: date):
+        """initialise all the values"""
         self.name = name
         self.email = email
         self.date_of_birth = dob
@@ -41,6 +44,7 @@ class Assessment:
     """Created the structure for all assessments"""
 
     def __init__(self, name: str, type: str, score: int):
+        """initialise all the values"""
         self.name = name
         self.type = type
         self.score = score
@@ -55,6 +59,7 @@ class MultipleChoiceAssessment(Assessment):
     """Creates Variant for only Multi choice"""
 
     def __init__(self, name, score):
+        """initialise all the values"""
         self.name = name
         self.score = score
         self.type = 'multiple-choice'
@@ -68,6 +73,7 @@ class TechnicalAssessment(Assessment):
     """Creates Variant for only Technical"""
 
     def __init__(self, name, score):
+        """initialise all the values"""
         self.name = name
         self.score = score
         self.type = 'technical'
@@ -81,6 +87,7 @@ class PresentationAssessment(Assessment):
     """Creates Variant for only presentation"""
 
     def __init__(self, name, score):
+        """initialise all the values"""
         self.name = name
         self.score = score
         self.type = 'presentation'
@@ -90,27 +97,31 @@ class PresentationAssessment(Assessment):
         return (self.score * 0.6)
 
 
-# ---------------------------------------------------------------------
-
 class Question:
+    """Creates each question and hold the correct answer and the answer the user inputed"""
 
     def __init__(self, question: str, chosen_answer: str, correct_answer: str):
+        """initialise all the values"""
         self.question = question
         self.chosen_answer = chosen_answer
         self.correct_answer = correct_answer
 
 
 class Quiz:
+    """Compiles all the questions into one list, and give the quiz a name and type"""
 
     def __init__(self, questions: list, name: str, type: str):
+        """initialise all the values"""
         self.questions = questions
         self.name = name
         self.type = type
 
 
 class Marking:
+    """Marks the quizzes and returns a percentage score"""
 
     def __init__(self, quiz: Quiz) -> None:
+        """initialise all the values"""
         self._quiz = quiz
 
     def mark(self) -> int:
@@ -128,15 +139,13 @@ class Marking:
         return round((questions_got_correct/number_of_questions)*100)
 
     def generate_assessment(self) -> Assessment:
+        """creates an assessment instance of appropriate type, based on the type in quiz"""
         if self._quiz.type == 'multiple-choice':
             assessment = MultipleChoiceAssessment(self._quiz.name, self.mark())
-
         elif self._quiz.type == 'technical':
             assessment = TechnicalAssessment(self._quiz.name, self.mark())
-
         elif self._quiz.type == 'presentation':
             assessment = PresentationAssessment(self._quiz.name, self.mark())
-
         else:
             raise TypeError("Invalid type of test")
 
